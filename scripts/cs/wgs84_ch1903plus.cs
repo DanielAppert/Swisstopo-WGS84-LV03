@@ -26,6 +26,9 @@
 // Updated 9 dec 2014
 // Please validate your results with NAVREF on-line service: http://www.swisstopo.admin.ch/internet/swisstopo/en/home/apps/calc/navref.html (difference ~ 1-2m)
 
+//Updating the code for LV95 using the uploaded documentation of December 2016
+//Daniel Appert, July 2020.
+
 using System;
 
 namespace swisstopo.geodesy.gpsref
@@ -52,7 +55,7 @@ namespace swisstopo.geodesy.gpsref
             return;
         }
 
-        // Convert WGS lat/long (° dec) to CH y
+        // Convert WGS lat/long (Â° dec) to CH y
         private static double WGStoCHy(double lat, double lng)
         {
             // Convert decimal degrees to sexagesimal seconds
@@ -73,7 +76,7 @@ namespace swisstopo.geodesy.gpsref
             return y;
         }
 
-        // Convert WGS lat/long (° dec) to CH x
+        // Convert WGS lat/long (Â° dec) to CH x
         private static double WGStoCHx(double lat, double lng)
         {
             // Convert decimal degrees to sexagesimal seconds
@@ -95,7 +98,7 @@ namespace swisstopo.geodesy.gpsref
             return x;
         }
 
-        // Convert WGS lat/long (° dec) and height to CH h
+        // Convert WGS lat/long (Â° dec) and height to CH h
         private static double WGStoCHh(double lat, double lng, double h)
         {
             // Convert decimal degrees to sexagesimal seconds
